@@ -190,11 +190,21 @@ var scroll = function(){
         }
         $('.banner_num').text("1 / 2")
         // sec2
+        // $('.sec2_slide').eq(0).addClass('block')
+        $('.txt').eq(0).css({display:'block'})
+        $('.title').eq(0).css({color:'#000'})
         for(let i=0; i<3; i++) {
             $('.sec2_cate').eq(i).click(function() {
-                $('.sec2_slide:nth-child(3)').css({
-                    display:'block'
+                $('.title').css({
+                    color:'#999'
                 })
+                $('.title').eq(i).css({
+                    color:'#000'
+                })
+                $('.txt').css({display:'none'})
+                $('.txt').eq(i).css({display:'block'})
+                $('.sec2_slide').css({display:'none'})
+                $('.sec2_slide').eq(i).css({display:'block'})
             })
         }
   })

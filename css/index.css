@@ -163,9 +163,17 @@ swiper-container {
     display: block;
     width: 100%;
   }
-  .sec2_slide:nth-child(3) {
+  .dessert {
     display: none;
   }
+  .deil {
+    display: none;
+  }
+
+.txt {
+    display: none;
+}
+
 /* 인디케이터 */
 .indicator {
     position: fixed;
