@@ -32,25 +32,33 @@ html, body {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 100%;
 }
 .banner1 {background: url(../img/main1.jfif) no-repeat center / cover;}
 .banner2 {background: url(../img/main2.jfif) no-repeat center / cover;}
 /* 배너 인디케이터 */
 .b_indicator {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 250px;
-    padding: 15px 0;
+    padding: 17px 0;
     box-sizing: border-box;
-    background: #525252;
-    border-radius: 15px;
+    background: #3d3d3de3;
+    border-radius: 30px;
 }
 .banner_btn_box {
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.banner_num {
+    line-height: 24px;
+    color: #fff;
+    font-size: 14px;
 }
 /* 인디케이터 */
 .indicator {

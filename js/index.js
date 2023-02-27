@@ -105,5 +105,28 @@ var scroll = function(){
             }, 300)
             $('.hover_menu').stop().slideUp("fast");
         })
-        
+        // sec1
+        let banner = $('.banner');
+        let index = 0;
+        banner.eq(0).css({left:0})
+        $('#r_btn').click(function() {
+            slide(index%2, '-100%', (index+1)%2, '100%', index+=1)
+        })
+        $('#l_btn').click(function() {
+            slide(index%2, '100%', (index-1)%2, '-100%', index+=1)
+        })
+        function slide(cidx, c_pos, oidx, o_pos, next_idx) {
+            //나갈판
+            banner.eq(cidx).animate({
+                left:c_pos
+            }, 400)
+            banner.eq(oidx).css({left:o_pos})
+            banner.eq(oidx).animate({
+                left:'0'
+            }, 400)
+            next_idx;
+
+            //인디케이터
+            $('.banner_num').innerText="11"
+        }
   })
