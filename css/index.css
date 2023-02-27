@@ -20,7 +20,7 @@ html, body {
     position: relative;
 }
 #sec1 {background-color: antiquewhite;}
-#sec2 {background-color: #fff; overflow: auto;}
+#sec2 {background-color: #fff; overflow: auto; overflow-x: hidden;}
 #sec3 {background-color: rgb(49, 147, 238);}
 #sec4 {background-color: rgb(209, 62, 4);}
 #sec5 {background-color: rgb(219, 46, 219);}
@@ -110,7 +110,6 @@ html, body {
     width: 50%;
     height: 517px;
     position: relative;
-    overflow: hidden;
 }
 .sec2_main_slide {
     position: relative;
