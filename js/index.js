@@ -73,7 +73,7 @@ var scroll = function(){
   scroll();
 
   $(document).ready(function() {
-        // history.scrollRestoration = "manual";
+        history.scrollRestoration = "manual";
         // header
         let header = $('.header');
         let cate = $('.h_menu');
@@ -105,12 +105,71 @@ var scroll = function(){
             }, 300)
             $('.hover_menu').stop().slideUp("fast");
         })
+        // 헤더 스크롤
+        $(window).scroll(function() {
+            let s_top = $(window).scrollTop();
+            if(s_top > 0) {
+                $('.header').css({
+                    background:'#fff',
+                })
+                $('.h_menu > ul').css({color:'black'});
+                $('.header .logo').css({
+                    background: 'url(../img/logo_black.svg)'
+                })
+                $('.h_sns').css({
+                    background: 'url(../img/ico_24_allmenu_black.svg)'
+                })
+                header.mouseleave(function() {
+                    header.css({
+                        backgroundColor: '#fff',
+                        transition: 'background 0.5s',
+                        boxShadow: '0px 0px 4px #00000029',
+                    })
+                    $('.h_menu > ul').css({color:'black'})
+                })
+                
+            }
+            else if(s_top == 0) {
+                $('.header').css({
+                    backgroundColor: 'inherit',
+                    transition: 'background 0.2s',
+                    boxShadow: '0px 0px 0px #00000029'
+                })
+                $('.h_menu > ul').css({color:'white'});
+                $('.header .logo').css({
+                    background: 'url(../img/logo_white.svg)'
+                })
+                $('.h_sns').css({
+                    background: 'url(../img/ico_24_allmenu_white.svg)'
+                })
+                header.mouseleave(function() {
+                    header.css({
+                        backgroundColor: '#fff',
+                        transition: 'background 0.5s',
+                        boxShadow: '0px 0px 4px #00000029',
+                    })
+                    $('.h_menu > ul').css({color:'black'})
+                })
+            }
+
+            if(s_top >= $('#sec2').offset().top) {
+                $('.top').animate({
+                    height:'67px',
+                }, 200)
+            }
+            if(s_top == $('#sec1').offset().top) {
+                $('.top').animate({
+                    height:'0px',
+                }, 200)
+            }
+        })
         // sec1
         let banner = $('.banner');
         let index = 0;
         banner.eq(0).css({left:0})
         $('#r_btn').click(function() {
             slide(index%2, '-100%', (index+1)%2, '100%', index+=1)
+            
         })
         $('#l_btn').click(function() {
             slide(index%2, '100%', (index-1)%2, '-100%', index+=1)
@@ -127,6 +186,33 @@ var scroll = function(){
             next_idx;
 
             //인디케이터
-            $('.banner_num').innerText="11"
+            $('.banner_num').text(`${oidx+1} / 2`)
         }
+        $('.banner_num').text("1 / 2")
+        // sec2
+        let sec2_banner = $('.sec2_banner');
+        let idx = 0;
+        banner.eq(0).css({left:0})
+        $('#r_btn').click(function() {
+            slide(index%2, '-100%', (index+1)%2, '100%', index+=1)
+            
+        })
+        $('#l_btn').click(function() {
+            slide(index%2, '100%', (index-1)%2, '-100%', index+=1)
+        })
+        function slide(cidx, c_pos, oidx, o_pos, next_idx) {
+            //나갈판
+            banner.eq(cidx).animate({
+                left:c_pos
+            }, 400)
+            banner.eq(oidx).css({left:o_pos})
+            banner.eq(oidx).animate({
+                left:'0'
+            }, 400)
+            next_idx;
+
+            //인디케이터
+            $('.sec2_num').text(`${oidx+1} / 2`)
+        }
+        $('.sec2_num').text("1 / 2")
   })

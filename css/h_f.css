@@ -56,3 +56,38 @@
 .header:hover .h_sns {
     background: url(../img/ico_24_allmenu_black.svg);
 }
+/* top */
+.main_fixed_box {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+.top {
+    float: right;
+    width: 67px;
+    height: 0px;
+    background: #7c7c7c;
+    text-align: center;
+    line-height: 67px;
+    font-size: 34px;
+    color: #fff;
+}
+.group_buy {
+    width: 191px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 30px;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    line-height: 72px;
+    border-radius: 40px;
+    background: rgba(213, 0, 55, 9);
+}
+.group_buy img {
+    position: absolute;
+    top: 26%;
+    right: 15px;
+
+}

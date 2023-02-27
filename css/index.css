@@ -1,4 +1,10 @@
 /* 바디 전체 */
+@font-face {
+    font-family: 'Cafe24Ohsquare';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 html {
     overflow: hidden;
 }
@@ -14,7 +20,7 @@ html, body {
     position: relative;
 }
 #sec1 {background-color: antiquewhite;}
-#sec2 {background-color: rgb(180, 179, 74);}
+#sec2 {background-color: #fff; overflow: auto;}
 #sec3 {background-color: rgb(49, 147, 238);}
 #sec4 {background-color: rgb(209, 62, 4);}
 #sec5 {background-color: rgb(219, 46, 219);}
@@ -59,6 +65,88 @@ html, body {
     line-height: 24px;
     color: #fff;
     font-size: 14px;
+}
+/* sec2 */
+.sec2_main {
+    max-width: 1310px;
+    display: flex;
+    margin: 200px auto 0;
+}
+.sec2_txt_box {
+    width: 50%;
+    /* margin-top: 100px; */
+    position: relative;
+    padding: 0 48px;
+    box-sizing: border-box;
+}
+.sec2_txt_title {
+    font-size: 76px;
+    font-weight: 900;
+    font-family: 'Cafe24Ohsquare';
+    margin: 20px 0 60px;
+}
+.sec2_txt_title::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: 16px;
+    background-color: #d50037;
+}
+.sec2_cate {
+    height: 120px;
+}
+.sec2_cate p:nth-child(1) {
+    margin: 0;
+}
+.sec2_cate p:nth-child(2) {
+    font-size: 32px;
+    font-weight: 900;
+    font-family: 'Cafe24Ohsquare';
+    color: #999;
+    margin: 15px 0;
+}
+.sec2_slide {
+    width: 50%;
+    height: 517px;
+    position: relative;
+    overflow: hidden;
+}
+.sec2_main_slide {
+    position: relative;
+    height: 100%;
+}
+.sec2_banner {
+    width: 176px;
+    height: 176px;
+    border: 1px solid;
+    position: absolute;
+    bottom: 10px;
+
+}
+.b1 {left: 0;}
+.b2 {left: 400px;}
+.b3 {left: 600px;}
+.b4 {left: 800px;}
+.sec2_indicator {
+    width: 424px;
+    padding: 15px 0;
+    box-sizing: border-box;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    transform: translateX(-50%);
+}
+.sec2_btn_box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.sec2_num {
+    line-height: 30px;
+    color: #fff;
 }
 /* 인디케이터 */
 .indicator {
