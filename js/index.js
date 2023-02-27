@@ -190,33 +190,11 @@ var scroll = function(){
         }
         $('.banner_num').text("1 / 2")
         // sec2
-        let mb_width = $('.main_banner').width(); // 메인배너의 전체 가로 크기
-        let item_width = mb_width / 3;  // 메인 가로 / 보여줄 칸수
-        let b_count = $('.sec2_banner').length; // 배너 개수
-
-        let sec2_banner = $('.sec2_banner');
-        let idx = 0;
-        sec2_banner.eq(0).css({left:0})
-        $('#r_btn').click(function() {
-            slide(index%2, '-100%', (index+1)%2, '100%', index+=1)
-            
-        })
-        $('#l_btn').click(function() {
-            slide(index%2, '100%', (index-1)%2, '-100%', index+=1)
-        })
-        // function slide(cidx, c_pos, oidx, o_pos, next_idx) {
-        //     //나갈판
-        //     sec2_banner.eq(cidx).animate({
-        //         left:c_pos
-        //     }, 400)
-        //     sec2_banner.eq(oidx).css({left:o_pos})
-        //     sec2_banner.eq(oidx).animate({
-        //         left:'0'
-        //     }, 400)
-        //     next_idx;
-
-        //     //인디케이터
-        //     $('.sec2_num').text(`${oidx+1} / 2`)
-        // }
-        $('.sec2_num').text("1 / 2")
+        for(let i=0; i<3; i++) {
+            $('.sec2_cate').eq(i).click(function() {
+                $('.sec2_slide:nth-child(3)').css({
+                    display:'block'
+                })
+            })
+        }
   })
