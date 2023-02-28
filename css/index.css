@@ -28,7 +28,7 @@ html, body {
     background-position: 100% 100%;
     overflow: auto; 
 }
-#sec4 {background-color: rgb(209, 62, 4);}
+#sec4 {background-color: rgb(255, 255, 255); position: relative;}
 #sec5 {background-color: rgb(219, 46, 219);}
 #sec6 {background-color: rgb(184, 128, 56);}
 
@@ -223,6 +223,104 @@ swiper-container {
     font-weight: 400;
     line-height: 35px;
     color: #534d49;
+}
+/* sec4 */
+.sec4_main {
+    max-width: 1310px;
+    margin: 0px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    text-align: left;
+}
+.sec4_title {
+    position: absolute;
+    top: 62%;
+    margin-top: -20.2%;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'Cafe24Ohsquare';
+    z-index: 1;
+}
+.sec4_title::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: 16px;
+    margin-left: 15px;
+    background-color: #d50037;
+}
+.sec4_main_slide {
+    position: absolute;
+    top: 25%;
+    right: 0px;
+    width: 1360px;
+    margin-right: 40px;
+    height: 552px;
+    overflow: hidden;
+}
+.sec4_banner {
+    width: 1062px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.img_box {
+    width: 552px;
+    height: 552px;
+}
+.img_box img {
+    width: 552px;
+    height: 552px;
+}
+.sec4_s_txt_box {
+    margin-left: 40px;
+}
+.icon {
+    width: 64px;
+    height: 64px;
+}
+.sec4_s_title {
+    margin-right: 16px;
+    line-height: 1;
+    font-size: 32px;
+    font-weight: 900;
+}
+.arrow {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0;
+    vertical-align: bottom;
+}
+.sec4_s_desc {
+    margin-bottom: 100px;
+}
+.sec4_banner_indicator {
+    width: 250px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+.sec4_banner_btn_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.sec4_banner_num {
+    display: inline-block;
 }
 /* 인디케이터 */
 .indicator {

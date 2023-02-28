@@ -204,4 +204,30 @@ var scroll = function(){
                 $('.sec2_slide').eq(i).css({display:'block'})
             })
         }
+        // sec4
+        let sec4_banner = $('.sec4_banner');
+        let idx = 0;
+        sec4_banner.eq(0).css({left:0})
+        $('.r_btn').click(function() {
+            slide2(idx%4, '-100%', (idx+1)%4, '100%', idx+=1)
+            
+        })
+        $('.l_btn').click(function() {
+            slide2(idx%4, '100%', (idx-1)%4, '-100%', idx+=1)
+        })
+        function slide2(cidx, c_pos, oidx, o_pos, next_idx) {
+            //나갈판
+            sec4_banner.eq(cidx).animate({
+                left:c_pos
+            }, 400)
+            sec4_banner.eq(oidx).css({left:o_pos})
+            sec4_banner.eq(oidx).animate({
+                left:'0'
+            }, 400)
+            next_idx;
+
+            //인디케이터
+            $('.sec4_banner_num').text(`${oidx+1} / 4`)
+        }
+        $('.sec4_banner_num').text("1 / 4")
   })
