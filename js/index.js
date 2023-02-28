@@ -109,9 +109,6 @@ var scroll = function(){
         $(window).scroll(function() {
             let s_top = $(window).scrollTop();
             if(s_top > 0) {
-                $('.header').css({
-                    background:'#fff',
-                })
                 $('.h_menu > ul').css({color:'black'});
                 $('.header .logo').css({
                     background: 'url(../img/logo_black.svg)'
@@ -121,9 +118,9 @@ var scroll = function(){
                 })
                 header.mouseleave(function() {
                     header.css({
-                        backgroundColor: '#fff',
+                        backgroundColor: 'inherit',
                         transition: 'background 0.5s',
-                        boxShadow: '0px 0px 4px #00000029',
+                        boxShadow: '0px 0px 0px #00000029',
                     })
                     $('.h_menu > ul').css({color:'black'})
                 })
@@ -144,11 +141,11 @@ var scroll = function(){
                 })
                 header.mouseleave(function() {
                     header.css({
-                        backgroundColor: '#fff',
+                        backgroundColor: 'inherit',
                         transition: 'background 0.5s',
-                        boxShadow: '0px 0px 4px #00000029',
+                        boxShadow: '0px 0px 0px #00000029',
                     })
-                    $('.h_menu > ul').css({color:'black'})
+                    $('.h_menu > ul').css({color:'white'})
                 })
             }
 

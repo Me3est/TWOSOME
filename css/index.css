@@ -21,7 +21,13 @@ html, body {
 }
 #sec1 {background-color: antiquewhite;}
 #sec2 {background-color: #fff; overflow: auto; overflow-x: hidden;}
-#sec3 {background-color: rgb(49, 147, 238);}
+.section3 {
+    background: url(../img/main_alist_pc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    overflow: auto; 
+}
 #sec4 {background-color: rgb(209, 62, 4);}
 #sec5 {background-color: rgb(219, 46, 219);}
 #sec6 {background-color: rgb(184, 128, 56);}
@@ -173,7 +179,51 @@ swiper-container {
 .txt {
     display: none;
 }
-
+/* sec3 */
+.sec3_main {
+    max-width: 1310px;
+    margin: 200px auto 0;
+}
+.sec3_txt_box {
+    width: 50%;
+    /* margin-top: 100px; */
+    position: relative;
+    padding: 0 48px;
+    box-sizing: border-box;
+}
+.sec3_txt_title {
+    font-size: 86px;
+    font-weight: 900;
+    font-family: 'Cafe24Ohsquare';
+    margin: 20px 0 40px;
+}
+.sec3_txt_title::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: 16px;
+    margin-left: 15px;
+    background-color: #d50037;
+}
+.sec_txt_mid_title {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-family: 'Cafe24Ohsquare';
+    font-size: 32px;
+    line-height: 1.3;
+}
+.sec_s_title {
+    margin-bottom: 36px;
+    font-weight: 600;
+    font-size: 24px;
+}
+.sec3_desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #534d49;
+}
 /* 인디케이터 */
 .indicator {
     position: fixed;
